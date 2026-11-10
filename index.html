@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1a3d" />
+  <meta name="description" content="Uspávání broučků – interaktivní mapa a program večerní akce Mateřského centra KidzTown v Kolíně." />
+  <title>Uspávání broučků – mapa a program</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <script type="module" crossorigin src="./assets/index-Ytvnw6xt.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Dqj7_qCg.css">
+</head>
+<body>
+  <div class="app" id="app" data-view="map">
+    <header class="topbar">
+      <img class="fairy fairy-l" src="vily-l.webp" alt="" width="64" height="72" />
+      <div class="head-text">
+        <p id="evt-invite" class="invite"></p>
+        <h1 id="evt-title">Uspávání broučků</h1>
+        <p id="evt-sub" class="sub"></p>
+      </div>
+      <img class="fairy fairy-r" src="vily-r.webp" alt="" width="64" height="72" />
+    </header>
+    <div id="banner" class="banner" role="status" hidden></div>
+
+    <main class="main">
+      <section id="panel-program" class="panel-program" aria-labelledby="h-program">
+        <div class="panel-head">
+          <h2 id="h-program">Program</h2>
+          <button type="button" id="hide-done" class="chip" aria-pressed="false">Skrýt skončené</button>
+        </div>
+        <p id="program-note" class="note" hidden></p>
+        <ol id="program-list" class="program-list"></ol>
+        <div id="program-extra" class="program-extra"></div>
+      </section>
+
+      <section id="panel-map" class="panel-map" aria-label="Mapa">
+        <div id="map" aria-label="Interaktivní mapa stanovišť. Šipky posouvají mapu, plus a minus mění přiblížení."></div>
+
+        <div class="map-controls">
+          <button type="button" id="btn-home" class="mapbtn" aria-label="Celkový pohled na mapu"><span aria-hidden="true">⤢</span><span class="mapbtn-t">Celá mapa</span></button>
+          <button type="button" id="btn-locate" class="mapbtn" aria-pressed="false"><span aria-hidden="true">📍</span><span class="mapbtn-t" id="locate-label">Moje poloha</span></button>
+        </div>
+        <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+        <div id="calib" class="calib" hidden></div>
+
+        <div id="sheet" class="sheet" role="dialog" aria-modal="false" aria-labelledby="sheet-title" hidden>
+          <div class="sheet-grab" id="sheet-grab" aria-hidden="true"><span></span></div>
+          <div class="sheet-head">
+            <span class="sheet-ico" id="sheet-ico" aria-hidden="true"></span>
+            <h2 id="sheet-title" tabindex="-1"></h2>
+            <button type="button" id="sheet-close" class="iconbtn" aria-label="Zavřít kartu stanoviště">✕</button>
+          </div>
+          <div id="sheet-body" class="sheet-body"></div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="tabbar" aria-label="Hlavní navigace">
+      <a href="#/mapa" id="tab-map"><span aria-hidden="true">🗺️</span>Mapa</a>
+      <a href="#/program" id="tab-program"><span aria-hidden="true">🗓️</span>Program</a>
+    </nav>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p style="padding:1rem">Pro zobrazení mapy a programu je potřeba JavaScript.</p></noscript>
+</body>
+</html>

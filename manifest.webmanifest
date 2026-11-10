@@ -1,0 +1,10 @@
+{
+  "name": "Uspávání broučků – mapa a program",
+  "short_name": "Broučci",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1a3d",
+  "theme_color": "#0b1a3d",
+  "lang": "cs",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
