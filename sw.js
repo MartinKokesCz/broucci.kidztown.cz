@@ -1,7 +1,7 @@
 /* Service worker (generuje se při buildu – viz vite.config.ts). Verze se mění s každým buildem. */
-const VERSION = '61de68a992cd';
+const VERSION = '5fdb84222bc5';
 const CACHE = 'kt-' + VERSION;
-const PRECACHE = ["./","./assets/index-BJv-eFQZ.css","./assets/index-D96evU2p.js","./favicon.svg","./index.html","./manifest.webmanifest","./vily-l.webp","./vily-r.webp"];
+const PRECACHE = ["./","./assets/index-BAgIKBnS.js","./assets/index-DJm7jE36.css","./favicon.svg","./index.html","./kidztown-logo.webp","./manifest.webmanifest","./vily-l.webp","./vily-r.webp"];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)));
